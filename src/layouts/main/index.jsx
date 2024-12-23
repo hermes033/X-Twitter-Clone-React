@@ -5,7 +5,7 @@ import Rightbar from "./rightbar"
 
 function MainLayout() {
   return (
-    <div className="w-[1265px] mx-auto flex">
+    <div className="w-[1284px] mx-auto flex">
 
       <Sidebar />
 
