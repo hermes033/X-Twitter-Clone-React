@@ -24,27 +24,25 @@ export default function More() {
         </button>
       </PopoverButton>
 
-
+      {/* More Click PopOver hover da problemz */}
       <PopoverPanel className="w-[318px] h-[449px] absolute bottom-1 left-0 bg-black shadow-box rounded-xl right-0 items-stretch flex flex-col overflow-hidden">
         {morePopop.map((menu, index) => (
           <NavLink
             key={index}
-            to={menu.path}
-            className="py-1 block group"
+            to={menu.elementt} // nese BU HISSE SONRA BAX CLICK ELIYENDE KECMIR ORA DEQIQE 22:35 3 CU DERS
+            className="py-1 block group w-[318px] h-[56px]"
           >
-            <div className="px-3 py-2 flex items-center gap-5 transition-colors group-hover:bg-[#edf1f31a]  w-[318px] h-[56px]">
-              <div className="w-[26.25px] h-[26.25px] relative">
+            <div className="px-4 flex items-center gap-5 transition-colors group-hover:bg-[#edf1f31a]  w-[318px] h-[56px]">
+              <div className="w-[24px] h-[24px] relative">
                 {menu.icon.active}
               </div>
-              <div className="text-xl pr-4 font-bold">
+              <div className="text-xl pr-4 font-bold w-[238px] h-[24]">
                 {menu.title}
               </div>
             </div>
           </NavLink>
         ))}
       </PopoverPanel>
-
-
     </Popover>
   )
 }

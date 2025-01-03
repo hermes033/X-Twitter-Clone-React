@@ -1,14 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "~/layouts/main";
+import Communities from "~/pages/communities";
 import Explore from "~/pages/explore";
+import Grok from "~/pages/grok";
 import Home from "~/pages/home";
+import Messages from "~/pages/messages";
 import Notifications from "~/pages/notifications";
 import PageNotFound from "~/pages/pagenotfound";
-
+import Premium from "~/pages/premium";
+import Profile from "~/pages/profile";
 
 const routes = createBrowserRouter([
 
-  {    
+  {
     path: '/',
     element: <MainLayout />,
     children: [
@@ -26,27 +30,31 @@ const routes = createBrowserRouter([
       },
       {
         path: 'messages',
-        element: 'messages component'
+        element: <Messages />
       },
       {
         path: 'grok',
-        element: 'grok component'
+        element: <Grok />
       },
       {
         path: 'communities',
-        element: 'communities component'
+        element: <Communities />
       },
       {
         path: 'premium',
-        element: 'premium component'
+        element: <Premium />
       },
       {
         path: 'profile',
-        element: 'profile component'
+        element: <Profile />
       },
       {
         path: '*',
         element: <PageNotFound />
+      },
+      {
+        path: ':slug',
+        element: <Profile />
       },
     ]
   },
