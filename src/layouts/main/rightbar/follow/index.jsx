@@ -4,7 +4,7 @@ import { followApi } from "~/utils/followApi";
 
 export default function WhoToFollow() {
   return (
-    <aside className="w-[348.4px] h-[295.79px] rounded-2xl mb-[16px] flex flex-col border border-[#2F3336]">
+    <aside className="w-[350px] h-[295.79px] rounded-2xl mb-[16px] flex flex-col border border-[#2F3336]">
       {/* Başlık */}
       <div className="w-full h-[48px] flex justify-between p-[12px]">
         <h2 className="text-[20px] font-bold text-[#e7e9ea]">Who to follow</h2>

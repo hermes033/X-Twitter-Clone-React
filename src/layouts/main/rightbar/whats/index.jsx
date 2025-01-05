@@ -4,7 +4,7 @@ import WhatsComponent from "./whatsnews"
 export default function WhatsHappening() {
   return (
 
-    <section className="w-[348.4px] h-[471.1px] border border-[#2F3336] rounded-2xl pt-[12px]">
+    <section className="w-[350px] h-[471.1px] border border-[#2F3336] rounded-2xl pt-[12px]">
       <div className="w-full h-[48px] pl-4">
         <div className="w-[316.4px] h-[24px]">
           <h2 className="w-[178.29px] h-full text-[20px] font-bold text-[#e7e9ea]">What’s happening</h2>

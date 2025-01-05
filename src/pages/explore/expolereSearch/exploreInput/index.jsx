@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useClickAway } from "react-use";
 
-export default function Search() {
+export default function ExploreInput() {
 
 
   const [query, setQuery] = useState("");
@@ -34,7 +34,7 @@ export default function Search() {
   return (
     <div
       ref={ref}
-      className="bg-black min-h-[53px] w-[350px] h-[53px] flex items-center">
+      className="min-h-[53px] w-[500.8px] h-[53px] flex items-center">
       <label
         onClick={() => {
           setColor("#1d9bf0"); // Tıklandığında renk mavi olur
@@ -77,7 +77,7 @@ export default function Search() {
       </label>
 
       {focus && (
-        <div className="absolute top-12 w-[350px] min-h-[100px] flex justify-center text-center rounded-lg max-h-[calc(80vh-53px)  bg-black shadow-box">
+        <div className="absolute top-12 w-[500.8px] min-h-[100px] flex justify-center text-center rounded-lg max-h-[calc(80vh-53px)  bg-black shadow-box">
           {query ? query : <span className="p-3 pt-5 leading-5 text-[#71767b]">Try searching for people, lists, or keywords</span>}
         </div>
       )}

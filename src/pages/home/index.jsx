@@ -15,7 +15,7 @@ function Home() {
         <NavHome />
       </nav>
 
-      <div className='mb-1'>
+      <div>
         <PostHome />
       </div>
 

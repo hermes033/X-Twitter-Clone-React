@@ -8,7 +8,7 @@ export default function PostHome() {
   const currentAccount = useAccount()
 
   return (
-    <div className="cursor-pointer w-full h-[115.2px] border-b-[2px] border-[#2f3336]">
+    <div className="cursor-pointer w-full h-[120.2px] border-b-[2px] border-[#2f3336]">
 
       <div className="w-full h-full flex pl-4">
 

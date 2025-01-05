@@ -11,7 +11,7 @@ function Button({ size, children }) {
           'w-[230px] h-[52px]  font-medium text-[18px]': size === 'large',
           'w-[188.5px] h-[36px] font-bold' : size === 'premium',
           'w-[78px] h-[32px] font-semibold' : size === 'followBtn',
-          'w-[66.34px] h-[36px] bg-[#787a7a] font-semibold':size === 'homebtn'
+          'w-[66.34px] h-[36px]  bg-[#787a7a] font-semibold':size === 'homebtn'
         }
       )}
     >
