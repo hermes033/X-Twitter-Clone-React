@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import ExpoloreSearch from './expolereSearch'
 import ExploreLinkComp from './expoloreLink'
+import ExploreMain from './exploreMain'
 
 function Explore() {
   return (
@@ -14,7 +15,9 @@ function Explore() {
         <ExploreLinkComp/>
       </div>
 
-
+      <div className='w-full h-[336.6px]'>
+        <ExploreMain/>
+      </div>
     </div>
   )
 }
