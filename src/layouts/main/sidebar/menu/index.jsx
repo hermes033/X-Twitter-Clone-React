@@ -10,7 +10,7 @@ function Menu() {
       {/* Burda -mb-[10px men yazmisam] */}
       {
         mainMenu.map((menu, index) => (
-          <NavLink key={index} to={menu.path} className="py-1 block group -mb-[10px]">
+          <NavLink key={index} to={menu.path} className="rounded-full mr-10 py-1 block group -mb-[10px]">
             {({ isActive }) => (
               <div className={classNames("p-3 rounded-full inline-flex transition-colors items-start gap-5 group-hover:bg-[#eff3f41a]", {
                 'font-bold': isActive

@@ -1,14 +1,14 @@
 import Button from "~/components/button"
 import { useAccount } from "~/store/auth/hooks"
 
-{/* BURDA QALMISAM ICONLARA BORDER VERMELIYEM HOVERLERINDE SHOW POSTU DUZELDECEM BIRDE OLCUMLERDE SEHVLIKLER VAR AZCA ONA BAX */}
+{/* BURDA QALMISAM ICONLARA BORDER VERMELIYEM HOVERLERINDE SHOW POSTU DUZELDECEM BIRDE OLCUMLERDE SEHVLIKLER VAR AZCA ONA BAX */ }
 
 export default function PostHome() {
 
   const currentAccount = useAccount()
 
   return (
-    <div className="cursor-pointer w-full h-[120.2px] border-b-[2px] border-[#2f3336]">
+    <div className="mt-[53px] cursor-pointer w-full h-[120.2px] border-b-[2px] border-[#2f3336]">
 
       <div className="w-full h-full flex pl-4">
 

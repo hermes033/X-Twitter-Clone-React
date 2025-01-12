@@ -11,11 +11,11 @@ function Home() {
       </Helmet>
 
 
-      <nav className=''>
+      <nav className='fixed top-0'>
         <NavHome />
       </nav>
 
-      <div>
+      <div className=''>
         <PostHome />
       </div>
 

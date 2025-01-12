@@ -34,12 +34,12 @@ export default function Search() {
   return (
     <div
       ref={ref}
-      className="bg-black min-h-[53px] w-[350px] h-[53px] flex items-center">
+      className="bg-black -mb-7 min-h-[53px] w-[350px] h-[53px] flex items-center">
       <label
         onClick={() => {
           setColor("#1d9bf0"); // Tıklandığında renk mavi olur
         }}
-        className="search-label h-[43px] rounded-full bg-[#202327] w-full relative group border border-transparent focus-within:border-[#1d9bf0] focus-within:bg-black"
+        className="search-label h-[43px] rounded-full bg-black w-full relative group border border-[#333639] focus-within:border-[#1d9bf0] focus-within:bg-black"
       >
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
           <svg viewBox="0 0 24 24" className="none min-w-[32px]" height={18.75}>

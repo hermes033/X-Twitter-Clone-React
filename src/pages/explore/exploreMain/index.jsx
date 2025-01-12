@@ -1,10 +1,10 @@
 export default function ExploreMain() {
   return (
-    <div className="w-full h-full">
-      <img src='https://pbs.twimg.com/semantic_core_img/1874110387446001664/r5Oi9C0Z?format=jpg&name=360x360' className="opacity-75  w-b[590px]  h-[336.6px] object-contain absolute" alt="" />
-      <div className="absolute">
-        <p>Kings World Cup Nations</p>
-        <span>LIVE</span>
+    <div className="max-w-[599px] h-[336.6px]">
+      <img src='https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6776aee09c3dd5015d7b056c_6776aee49c3dd5015d7b06b7/scale_1200' className="opacity-70  max-w-[598px]  h-[336.6px] object-cover absolute" alt="" />
+      <div className="pt-[262px] pl-4 relative flex flex-col">
+        <p className="text-[25px] font-bold">Kings World Cup Nations</p>
+        <span className="text-[13px]">LIVE</span>
       </div>
     </div>
   )

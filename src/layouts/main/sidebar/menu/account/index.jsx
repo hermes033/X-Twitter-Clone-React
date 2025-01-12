@@ -9,7 +9,7 @@ export default function AccaountMenu() {
   return (
     <div className="mt-auto">
       <Popover className='relative'>
-        <PopoverButton className='my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-left items-center transition-all duration-[2000] outline-none'>
+        <PopoverButton className='my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-[259px] flex text-left items-center transition-all duration-[2000] outline-none'>
 
           <img src={account.avatar} className="w-10 h-10 rounded-full" alt="" />
           <div className="mx-3 text-[15px]">
@@ -19,7 +19,7 @@ export default function AccaountMenu() {
             </div>
           </div>
 
-          <svg viewBox="0 0 24 24" width={18.75} height={18.75} className="text-[#e7e9ea] ml-auto">
+          <svg viewBox="0 0 24 24" width={18.75} height={18.75} className="text-[#e7e9ea] ml-16">
             <path fill="#fff" d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z">
             </path>
           </svg>
