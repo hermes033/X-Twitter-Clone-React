@@ -14,7 +14,7 @@ function MainLayout() {
     <div className="min-w-[1024px] border-red-600 flex justify-center">
       <header
         className={`w-[275px] fixed ${
-          isMesgPage ? "mr-[990px] px" : "mr-[973px]"
+          isMesgPage ? "mr-[989px] px" : "mr-[973px]"
         }`}
       >
         <Sidebar />
@@ -22,7 +22,7 @@ function MainLayout() {
 
       <>
         {isMesgPage ? (
-          <div className="flex w-[1098px] ml-[366px]">
+          <div className="flex w-[1098px] ml-[363px]">
             <Messages />
             <MessagesRight />
           </div>
@@ -43,3 +43,4 @@ function MainLayout() {
 }
 
 export default MainLayout;
+// OLCUDE PROBLEM VAR MESSAGES DE
