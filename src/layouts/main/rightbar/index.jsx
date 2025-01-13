@@ -11,6 +11,7 @@ function Rightbar() {
   // Eğer /explore sayfasındaysak sadece WhoToFollow'u göster
   const isExplorePage = location.pathname === "/explore";
   const isNotfPage = location.pathname === "/notifications";
+  const isGrokPage = location.pathname === "/grok";
 
 
   return (
@@ -30,6 +31,10 @@ function Rightbar() {
             <WhatsHappening />
             <Footer />
           </div>
+        </div>
+      ) : isGrokPage ? (
+        <div>
+
         </div>
       ) : (
         <>
