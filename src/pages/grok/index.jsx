@@ -18,7 +18,7 @@ export default function Grok() {
             <GrokText />
           </div>
 
-          <div>
+          <div className="">
             <GrokMain />
           </div>
         </div>
