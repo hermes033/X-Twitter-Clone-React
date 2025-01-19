@@ -12,8 +12,8 @@ function Rightbar() {
   const isExplorePage = location.pathname === "/explore";
   const isNotfPage = location.pathname === "/notifications";
   const isGrokPage = location.pathname === "/grok";
-
-
+  const isCommPage = location.pathname === '/communities';
+  const isProfPage = location.pathname === '/undefined'
   return (
     <aside className="ml-[30px] min-w-[350px] min-h-[100vh]">
       {isExplorePage ? (
@@ -21,7 +21,7 @@ function Rightbar() {
           <WhoToFollow />
           <Footer />
         </div>
-      ) : isNotfPage ? (
+      ) : isNotfPage || isCommPage || isProfPage ? (
         <div>
           <div className="fixed top-0">
             <Search />

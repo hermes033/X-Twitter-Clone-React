@@ -13,7 +13,7 @@ function MainLayout() {
   return (
     <div className="min-w-[1024px] border-red-600 flex justify-center">
       <header
-        className={`w-[275px] fixed ${isMesgPage ? "mr-[989px] px" : "mr-[973px]"
+        className={`w-[275px] fixed ${isMesgPage ? "mr-[991px] px" : "mr-[974px]"
           }`}
       >
         <Sidebar />
@@ -21,7 +21,7 @@ function MainLayout() {
 
       <>
         {isMesgPage ? (
-          <div className="flex w-[1098px] ml-[363px]">
+          <div className="flex w-[1098px] ml-[367px]">
             <Messages />
             <MessagesRight />
           </div>
