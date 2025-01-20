@@ -1,13 +1,23 @@
-import { useParams } from "react-router-dom"
+import ProfileMain from "./profileMain"
+import ProfileNav from "./profileNav"
+import ProfileTop from "./profileTop"
 
 function Profile() {
-
-  const { slug } = useParams()
-
   return (
-    <div>
-      Profile Page - {slug} 21:58 3 bolum
-    </div>
+    <>
+      <div className="fixed top-0 w-[599px] bg-black">
+        <ProfileTop />
+      </div>
+
+      <div className="mt-[52px]">
+        <ProfileMain />
+      </div>
+
+      <div>
+        <ProfileNav/>
+      </div>
+    </>
+
   )
 }
 
