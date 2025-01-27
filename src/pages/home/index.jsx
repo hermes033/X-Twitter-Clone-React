@@ -1,7 +1,9 @@
 import { Helmet } from 'react-helmet-async'
 import NavHome from './navHome'
-import PostHome from   './postHome'
+import PostHome from './postHome'
 import ShowMoreHome from './showMore'
+import MainHome from './mainHome'
+
 
 function Home() {
   return (
@@ -15,12 +17,16 @@ function Home() {
         <NavHome />
       </nav>
 
-      <div className=''>
+      <div>
         <PostHome />
       </div>
 
       <div>
-        <ShowMoreHome/>
+        <ShowMoreHome />
+      </div>
+
+      <div className='w-full min-h-screen'>
+        <MainHome/>
       </div>
 
     </div>
