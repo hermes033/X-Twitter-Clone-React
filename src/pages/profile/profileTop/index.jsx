@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom"
 import { useAccount } from "~/store/auth/hooks"
 
@@ -7,7 +8,9 @@ function ProfileTop() {
 
   return (
     <div className="w-full h-[53px] flex">
-
+      <Helmet>
+        <title>{`${account.fullName} (@${account.userName})`} / X</title>
+      </Helmet>
       <div className="w-[53px] h-full mr-[18px] flex items-center justify-center">
         <Link to='/' className="w-[36px] h-[36px] flex items-center rounded-full hover:bg-[#3636366f] justify-center">
           <svg viewBox="0 0 24 24" width={20} height={20}>

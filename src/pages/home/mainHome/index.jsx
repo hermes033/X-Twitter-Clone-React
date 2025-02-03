@@ -18,7 +18,7 @@ const MainHome = () => {
   return (
     <div>
       {isLoading ? (
-        <div className="flex justify-center  h-screen">
+        <div className="flex justify-center h-screen">
           <div className="w-6 h-6 border-4 border-[#1d9bf0] border-t-transparent rounded-full animate-spin"></div>
         </div>
       ) : (

@@ -25,7 +25,7 @@ export default function More() {
       </PopoverButton>
 
       {/* More Click PopOver hover da problemz */}
-      <PopoverPanel className="w-[318px] h-[449px] absolute bottom-1 left-0 bg-black shadow-box rounded-xl right-0 items-stretch flex flex-col overflow-hidden">
+      <PopoverPanel className="w-[318px] h-[449px] bottom-1 left-0 bg-black shadow-box rounded-xl right-0 items-stretch flex flex-col overflow-hidden z-[9999] absolute"> 
         {morePopop.map((menu, index) => (
           <NavLink
             key={index}
