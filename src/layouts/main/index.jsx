@@ -32,7 +32,7 @@ function MainLayout() {
           </svg>
         </div>
       ) :
-        <div className="min-w-[1024px] border-red-600 flex justify-center">
+        <div className="min-w-[1024px] flex justify-center">
           <header
             className={`w-[275px] fixed ${isMesgPage ? "mr-[991px] px" : "mr-[974px]"
               }`}
@@ -40,7 +40,7 @@ function MainLayout() {
             <Sidebar />
           </header>
 
-          <>
+          <div className="min-w-[1024px] flex justify-center">
             {isMesgPage ? (
               <div className="flex w-[1098px] ml-[367px]">
                 <Messages />
@@ -48,16 +48,16 @@ function MainLayout() {
               </div>
             ) : (
               <>
-                <main className="border-l border-r border-[#2f3336] ml-[236px] border w-[600px]">
+                <main className="border-l border-r border-[#2f3336] ml-[235px] border w-[600px]">
                   <MainBar />
                 </main>
 
-                <aside className="w-[350px]">
+                <aside className="w-[350px] h-screen">
                   <Rightbar />
                 </aside>
               </>
             )}
-          </>
+          </div>
         </div>
       }
 

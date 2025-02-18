@@ -1,11 +1,23 @@
-import Button from "~/components/button"
+import { useState } from "react"
 import { useAccount } from "~/store/auth/hooks"
+
 
 {/* BURDA QALMISAM ICONLARA BORDER VERMELIYEM HOVERLERINDE SHOW POSTU DUZELDECEM BIRDE OLCUMLERDE SEHVLIKLER VAR AZCA ONA BAX */ }
 
-export default function PostHome() {
+export default function PostHome({ addPost }) {
 
   const currentAccount = useAccount()
+  const [inputValue, setInputValue] = useState("");
+
+  const handlePost = () => {
+    if (inputValue.trim() !== '') {
+      addPost({
+        id: Date.now(), // Benzersiz bir ID
+        content: inputValue,
+      });
+      setInputValue(''); // Input'u sıfırla
+    }
+  };
 
   return (
     <div className="mt-[53px] cursor-pointer w-full h-[120.2px] border-b-[2px] border-[#2f3336]">
@@ -19,7 +31,8 @@ export default function PostHome() {
         <div className="w-[518.4px] h-full">
 
           <div className="w-full h-[55.2px] pt-5">
-            <input className="w-[514.4px] h-[28px] border-none focus:outline-none bg-black text-[21px] pl-2 placeholder:text-[#6b7074]" type="text" placeholder="What is happening?!" />
+            <input value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)} className="w-[514.4px] h-[28px] border-none focus:outline-none bg-black text-[21px] pl-2 placeholder:text-[#6b7074]" type="text" placeholder="What is happening?!" />
           </div>
 
           <div className="w-full h-[56px] flex items-center">
@@ -65,7 +78,7 @@ export default function PostHome() {
             </div>
 
             <div className="w-[78.34px] h-[40px] pl-5 pt-2">
-              <Button size="homebtn">Post</Button>
+              <button className="font-bold  text-[#080a0d] w-[66.34px] h-[36px] rounded-full bg-[#787a7a]" onClick={handlePost}>Post</button>
             </div>
 
           </div>

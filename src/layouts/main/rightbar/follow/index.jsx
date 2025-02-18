@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "~/components/button";
 import { followApi } from "~/utils/followApi";
 
 export default function WhoToFollow() {
+
+const [btnClick,setBtnClick] = useState('Follow');
+
   return (
     <aside className="w-[350px] h-[295.79px] rounded-2xl mb-[16px] flex flex-col border border-[#2F3336]">
       {/* Başlık */}
@@ -37,9 +41,9 @@ export default function WhoToFollow() {
             </div>
 
             {/* Takip Et/Takip Ediliyor Butonu */}
-            <Button size="followBtn">
-              {user.isFollowing ? "Following" : "Follow"}
-            </Button>
+            <button onClick={()=>{setBtnClick('Following')}} className="w-[78px] h-[32px] bg-[#eff3f4] hover:bg-[#b6b6b6] font-semibold rounded-full flex items-center text-black justify-center transition-colors">
+              {btnClick}
+            </button>
           </li>
         ))}
       </ul>

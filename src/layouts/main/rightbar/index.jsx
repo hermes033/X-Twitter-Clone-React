@@ -15,7 +15,7 @@ function Rightbar() {
   const isCommPage = location.pathname === '/communities';
   const isProfPage = location.pathname === '/undefined'
   return (
-    <aside className="ml-[30px] min-w-[350px] min-h-[100vh]">
+    <aside className="ml-[30px] min-w-[350px]">
       {isExplorePage ? (
         <div className="mt-3">
           <WhoToFollow />
@@ -37,7 +37,7 @@ function Rightbar() {
 
         </div>
       ) : (
-        <>
+        <div className="max-h-[160vh] min-h-[160vh]">
           <div className="fixed top-0">
             <Search />
           </div>
@@ -47,7 +47,7 @@ function Rightbar() {
             <WhatsHappening />
             <Footer />
           </div>
-        </>
+        </div>
       )
       }
     </aside >

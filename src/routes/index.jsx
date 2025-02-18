@@ -4,6 +4,7 @@ import Communities from "~/pages/communities";
 import Explore from "~/pages/explore";
 import Grok from "~/pages/grok";
 import Home from "~/pages/home";
+import FollowingMainHome from "~/pages/home/folwHome";
 import Messages from "~/pages/messages";
 import Notifications from "~/pages/notifications";
 import PageNotFound from "~/pages/pagenotfound";
@@ -20,6 +21,7 @@ const routes = createBrowserRouter([
         index: true,
         element: <Home />
       },
+
       {
         path: 'explore',
         element: <Explore />
@@ -56,6 +58,10 @@ const routes = createBrowserRouter([
         path: ':slug',
         element: <Profile />
       },
+      {
+        path: '/home/following',
+        element: <FollowingMainHome />
+      }
     ]
   },
 

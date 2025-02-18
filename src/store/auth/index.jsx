@@ -6,7 +6,8 @@ const initialState = {
     userName: 'baghirov03',
     fullName: 'Ali Baghirov',
     avatar: 'https://pbs.twimg.com/profile_images/1811768156601438208/6Fx3OgS2_400x400.jpg',
-    joinedTime:'July 2024'
+    joinedTime: 'July 2024',
+    isVerified: true
   },
   accounts: [
     {
