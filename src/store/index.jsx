@@ -1,10 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
-import auth from "./auth";
+import { configureStore } from '@reduxjs/toolkit'
+import authReducer from './auth'
+import tweetReducer from './tweet'
+import userReducer from './user'
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
-    auth,
-  },
-});
+    auth: authReducer,
+    tweet: tweetReducer,
+    user: userReducer
+  }
+})
 
-export default store;
+export default store

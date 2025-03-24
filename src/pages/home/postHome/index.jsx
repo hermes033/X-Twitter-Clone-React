@@ -1,23 +1,34 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
 import { useAccount } from "~/store/auth/hooks"
+import { addTweet } from "~/store/tweet"
 
 
 {/* BURDA QALMISAM ICONLARA BORDER VERMELIYEM HOVERLERINDE SHOW POSTU DUZELDECEM BIRDE OLCUMLERDE SEHVLIKLER VAR AZCA ONA BAX */ }
 
-export default function PostHome({ addPost }) {
-
+export default function PostHome() {
+  const dispatch = useDispatch()
   const currentAccount = useAccount()
   const [inputValue, setInputValue] = useState("");
 
   const handlePost = () => {
     if (inputValue.trim() !== '') {
-      addPost({
-        id: Date.now(), // Benzersiz bir ID
+      dispatch(addTweet({
+        id: Date.now(),
         content: inputValue,
-      });
-      setInputValue(''); // Input'u sıfırla
+        user: {
+          name: currentAccount.name,
+          username: currentAccount.username,
+          avatar: currentAccount.avatar
+        },
+        createdAt: new Date().toISOString(),
+        likes: 0,
+        retweets: 0,
+        replies: 0
+      }));
+      setInputValue('');
     }
-  };
+  }; 
 
   return (
     <div className="mt-[53px] cursor-pointer w-full h-[120.2px] border-b-[2px] border-[#2f3336]">

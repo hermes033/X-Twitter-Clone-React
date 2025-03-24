@@ -1,38 +1,38 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadTweetsFromStorage } from '~/store/tweet';
 import NavHome from './navHome';
 import PostHome from './postHome';
 import ShowMoreHome from './showMore';
 import MainHome from './mainHome';
 
 function Home() {
-  const [posts1, setPosts1] = useState([]); // Postları tutacak state
+  const dispatch = useDispatch();
+  const tweets = useSelector(state => state.tweet.tweets);
 
-  // Yeni post ekleyen fonksiyon
-  const addPost = (newPost) => {
-    setPosts1([newPost, ...posts1]); // Yeni postu en üste ekler
-  };
+  useEffect(() => {
+    dispatch(loadTweetsFromStorage());
+  }, [dispatch]);
 
   return (
     <div>
       <Helmet>
         <title>Home / X</title>
-      </Helmet> 
+      </Helmet>
 
       <nav className='fixed top-0'>
         <NavHome />
       </nav>
 
-      {/* Post ekleme bileşeni, addPost fonksiyonunu prop olarak geçiyoruz */}
-      <PostHome addPost={addPost} />
+      <PostHome />
 
       <div>
         <ShowMoreHome />
       </div>
 
-      {/* Postları gösteren bileşen, posts state’ini prop olarak geçiyoruz */}
       <div className='w-full min-h-screen'>
-        <MainHome posts1={posts1} />
+        <MainHome posts1={tweets} />
       </div>
     </div>
   );

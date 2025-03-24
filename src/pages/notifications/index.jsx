@@ -3,7 +3,6 @@ import NotificationsMain from './notifMain'
 import NotfLinkComp from './notLink'
 import NotTop from './notifTop'
 
-
 function Notifications() {
   return (
     <div>
