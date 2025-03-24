@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function NotfLinkComp() {
   return (
-    <div className="w-full h-[53px] flex">
+    <div className="w-full h-[53px] flex z-[-1]">
       <nav className="flex w-full justify-around items-center list-none">
 
 

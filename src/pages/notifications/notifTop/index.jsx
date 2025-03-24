@@ -2,7 +2,7 @@
 
 export default function NotTop() {
   return (
-    <div className="w-full h-[53px] flex items-center justify-between">
+    <div className="w-full h-[53px] flex items-center justify-between z-[-1]">
 
       <h2 className="text-[20px] text-[#e7e9ea] font-bold pl-4 tracking-[0.3px]">
         Notifications

@@ -2,7 +2,7 @@ import ExploreInput from "./exploreInput";
 
 export default function ExpoloreSearch() {
   return (
-    <div className="w-full h-[53px] flex items-center justify-between">
+    <div className="w-full h-[53px] z-[-1] flex items-center justify-between">
 
       <div className="pl-5 w-[502.4px] h-full">
         <ExploreInput />

@@ -13,14 +13,14 @@ function Explore() {
 
       {/* Üst kısım sabit */}
       <div
-        className='w-[599px] h-[106.8px] fixed z-10 top-0 border-r-[1px] bg-black border-[#3d4043] border-b-[0.1px] border-l-0 border-t-0'
+        className='w-[599px] h-[106.8px] fixed top-0  bg-black border-[#3d4043] border-b-[0.1px] border-l-0 border-t-0 z-[0]'
       >
         <ExpoloreSearch />
         <ExploreLinkComp />
       </div>
 
       {/* Ana içerik */}
-      <div className='w-full h-[336.6px] pt-[106.8px]'>
+      <div className='w-full h-[336.6px] pt-[106.2px]'>
         <ExploreMain />
       </div>
 
@@ -28,7 +28,6 @@ function Explore() {
         <ExploreInf />
         <ExploreInf />
       </div>
-
     </div>
   );
 }
